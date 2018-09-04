@@ -413,7 +413,7 @@ const COLUMN_INDEX = {
       v: 'Percentile',
       f: (_,conf) => {
         _ = pFloat(_);
-        return isNaN(_) ? 'N/A' : +_toFixed(conf.format.significant_digit.percentile)
+        return isNaN(_) ? 'N/A' : +_.toFixed(conf.format.significant_digit.percentile)
       }
     }/*,
     last180: {
