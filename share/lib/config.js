@@ -1,10 +1,10 @@
 'use strict'
 
-const VERSION = '0.7.22'
-const CODENAME = 'Never-Lost Word'
+const VERSION = '0.1.0'
+const CODENAME = 'Dreamy Percentiles'
 
 const CONFIG_DEFAULT = {
-  lang: 'ko',
+  lang: 'en',
   style: {
     // body
     'resize-factor': 1,
