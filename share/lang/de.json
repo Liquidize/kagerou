@@ -242,7 +242,8 @@
       "last10": ["10s", "DPS der letzten 10s"],
       "last30": ["30s", "DPS der letzten 30s"],
       "last60": ["1m", "DPS der letzten 1min"],
-      "last180": ["3m", "DPS der letzten 3min (Beta)"]
+      "last180": ["3m", "DPS der letzten 3min (Beta)"],
+      "percentile": ["Pct", "Perzentil"]
     },
     "tank": {
       "_": "Tank",

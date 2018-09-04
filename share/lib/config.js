@@ -45,7 +45,8 @@ const CONFIG_DEFAULT = {
         'deal.per_second',
         'deal.critical',
         'deal.direct',
-        'deal.crit_direct'
+        'deal.crit_direct',
+        'deal.percentile'
       ]
     }, {
       id: 1,
@@ -110,6 +111,7 @@ const CONFIG_DEFAULT = {
     '_deal-last30': 3.5,
     '_deal-last60': 3.5,
     '_deal-last180': 3.5,
+    '_deal-percentile': 2.5,
     '_heal-critical': 2,
     '_tank-damage': 4,
     '_tank-heal': 4,
@@ -161,7 +163,8 @@ const CONFIG_DEFAULT = {
       dps: 2,
       hps: 2,
       accuracy: 2,
-      critical: 0
+      critical: 0,
+      percentile: 2
     },
     merge_pet: true,
     myname: [],
@@ -213,7 +216,8 @@ const COLUMN_SORTABLE = [
   'tank.damage',
   'tank.heal',
   'heal.per_second',
-  'heal.total'
+  'heal.total',
+  'deal.percentile'
 ]
 const COLUMN_MERGEABLE = [
   'encdps', 'damage', 'damage%',
@@ -222,7 +226,7 @@ const COLUMN_MERGEABLE = [
   'enchps', 'healed', 'healed%',
   'heals', 'critheals', 'cures',
   'powerdrain', 'powerheal',
-  'Last10DPS', 'Last30DPS', 'Last60DPS'
+  'Last10DPS', 'Last30DPS', 'Last60DPS','Percentile'
 ]
 const COLUMN_USE_LARGER = {
   'MAXHIT': ['MAXHIT', 'maxhit'],
@@ -403,6 +407,13 @@ const COLUMN_INDEX = {
       f: (_, conf) => {
         _ = pFloat(_)
         return isNaN(_)? '0' : +_.toFixed(conf.format.significant_digit.dps)
+      }
+    },
+    percentile: {
+      v: 'Percentile',
+      f: (_,conf) => {
+        _ = pFloat(_);
+        return isNaN(_) ? 'N/A' : +_toFixed(conf.format.significant_digit.percentile)
       }
     }/*,
     last180: {
