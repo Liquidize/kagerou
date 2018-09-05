@@ -141,8 +141,11 @@
       "info": {
         "_": "About",
         "created-by": "Created by",
+        "forked-by": "Forked/Continued by",
         "servers": "<del>Odin</del> Chocobo@KR / Tonberry",
         "hibiya": "Kuriyama Hibiya (히비야/ヒビヤ)",
+        "servers-liquid": "Goblin",
+        "liquid": "Kaliya Y'mhitra",
         "support": "Support",
         "license": "License",
         "icon-files": "All files under share/img/class,",
