@@ -414,7 +414,14 @@ const COLUMN_INDEX = {
       f: (_,conf) => {
         _ = pFloat(_);
         var r = (isNaN(_) || _ === 0 || _ === -1) ? 'N/A' : +_.toFixed(conf.format.significant_digit.percentile)
-        return r;
+        var c = "";
+        if (_ >= 95) {
+          c = "\"orange/\"";
+        } else {
+          c = "\"green/\"";
+        }
+        var line = "<font color=" + c + ">" + r + "</font>";
+        return line;
       }
     }/*,
     last180: {
