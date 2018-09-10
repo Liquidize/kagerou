@@ -1,7 +1,7 @@
 'use strict'
 
-const VERSION = '0.1.0'
-const CODENAME = 'Dreamy Percentiles'
+const VERSION = '0.1.1'
+const CODENAME = 'Dreaming of Orange Realities'
 
 const CONFIG_DEFAULT = {
   lang: 'en',
@@ -417,8 +417,14 @@ const COLUMN_INDEX = {
         var c = "";
         if (_ >= 95) {
           c = "\"orange/\"";
-        } else {
+        }  else if (_ >= 75 && _ <= 94) {
+          c = "\"purple/\"";
+        } else if (_ >= 50 && _ <= 74) {
+          c = "\"blue/\"";
+        } else if (_ >= 25 && _ <= 49) {
           c = "\"green/\"";
+        } else {
+          c = "\"grey/\"";
         }
         var line = "<font color=" + c + ">" + r + "</font>";
         return line;
