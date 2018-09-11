@@ -418,7 +418,7 @@ const COLUMN_INDEX = {
         if (_ >= 95) {
           c = "\"orange/\"";
         }  else if (_ >= 75 && _ <= 94) {
-          c = "\"purple/\"";
+          c = "\"violet/\"";
         } else if (_ >= 50 && _ <= 74) {
           c = "\"blue/\"";
         } else if (_ >= 25 && _ <= 49) {
