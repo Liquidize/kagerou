@@ -416,7 +416,7 @@ const COLUMN_INDEX = {
         var r = (isNaN(_) || _ === 0 || _ === -1) ? 'N/A' : +_.toFixed(conf.format.significant_digit.percentile)
         var c = "";
         if (_ >= 95) {
-          c = "\"orange/\"";
+          c = "\"pink/\"";
         }  else if (_ >= 75 && _ <= 94) {
           c = "\"violet/\"";
         } else if (_ >= 50 && _ <= 74) {
