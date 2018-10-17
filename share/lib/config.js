@@ -416,17 +416,17 @@ const COLUMN_INDEX = {
         var r = (isNaN(_) || _ === 0 || _ === -1) ? 'N/A' : +_.toFixed(conf.format.significant_digit.percentile)
         var c = "";
         if (_ >= 95) {
-          c = "\"#ff8000/\"";
+          c = "#ff8000";
         }  else if (_ >= 75 && _ <= 94) {
-          c = "\"#a335ee/\"";
+          c = "#a335ee";
         } else if (_ >= 50 && _ <= 74) {
-          c = "\"#0070ff/\"";
+          c = "#0070ff";
         } else if (_ >= 25 && _ <= 49) {
-          c = "\"#1eff00/\"";
+          c = "#1eff00";
         } else if (_ <= 24) {
-          c = "\"#666/\"";
+          c = "#666";
         } else {
-          c = "\"#fff/\"";
+          c = "#ffffff";
         }
         var line = "<font color=" + c + ">" + r + "</font>";
         return line;
