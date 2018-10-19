@@ -415,7 +415,10 @@ const COLUMN_INDEX = {
         _ = pFloat(_);
         var r = (isNaN(_) || _ === 0 || _ === -1) ? 'N/A' : +_.toFixed(conf.format.significant_digit.percentile)
         var c = "";
-        if (_ >= 95) {
+        if ( _ === 100) {
+          c = "#e5cc80"
+        }
+        else if (_ >= 95 && _ <= 99) {
           c = "#ff8000";
         }  else if (_ >= 75 && _ <= 94) {
           c = "#a335ee";
