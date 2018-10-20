@@ -1,7 +1,7 @@
 'use strict'
 
-const VERSION = '0.1.1'
-const CODENAME = 'Dreaming of Orange Realities'
+const VERSION = '0.1.0'
+const CODENAME = 'Public Release'
 
 const CONFIG_DEFAULT = {
   lang: 'en',
